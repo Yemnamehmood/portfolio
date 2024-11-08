@@ -1,114 +1,151 @@
-import Image from "next/image";
-import localFont from "next/font/local";
-
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
-});
+'use client'
+import React from 'react';
+import { FaNodeJs, FaReact, FaHtml5, FaCss3, FaGitAlt } from 'react-icons/fa';
+import { SiNextdotjs, SiTailwindcss, SiGooglecloud } from 'react-icons/si';
 
 export default function Home() {
   return (
-    <div
-      className={`${geistSans.variable} ${geistMono.variable} grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]`}
-    >
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              pages/index.js
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <div className="container">
+          {/* Home Section */}
+         <section id="home" className="home-section">
+         <div className="home-content">
+          <h1> Welcome To My Portfolio</h1>
+         <h1>Yemna Mehmood</h1> 
+         <p>Frontend Developer | React Enthusiast | Problem Solver</p>
+      </div>
+    </section>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+      
+
+      {/* About Section */}
+        <section id="about" className="about-section">
+        <div className="about-info">
+        <h2>About Me</h2>
+        <p>Hi, I&apos;m Yemna Mehmood, a passionate frontend developer with experience in building dynamic websites and applications. I love creating intuitive, beautiful user interfaces and solving complex problems.</p>
+      </div>
+       <div className="about-img">
+      <img src="/WhatsApp Image 2024-10-27 at 3.12.26 AM.jpeg" alt="Your Photo" />
+   </div>
+  </section>
+
+
+
+      {/* Projects Section */}
+      <section id="projects" className="projects-section">
+        <h2>My Projects</h2>
+        <p className="font-semibold"> Here&apos;s some projects that I have worked on.</p>
+        <br/>
+        <div className="projects-container">
+          <div className="project-card">
+            <h3>Project 1: My Portfolio</h3>
+            <p>A personal portfolio built using React and Next.js.</p>
+            <a href="https://yemnasportfolio.vercel.app/" target="_blank" className="project-link">View Project</a>
+          </div>
+          <div className="project-card">
+            <h3>Project 2: Expense Tracker</h3>
+            <p>A web application to manage expenses.</p>
+            <a href="https://expense-tracker-project-one.vercel.app/" target="_blank" className="project-link">View Project</a>
+          </div>
+          <div className="project-card">
+            <h3>Project 3: Notes App</h3>
+            <p>A web application to manage your notes.</p>
+            <a href="https://notes-app-by-yemna.vercel.app/" target="_blank" className="project-link">View Project</a>
+          </div>
+          <div className="project-card">
+            <h3>Project 4: Currency Converter App</h3>
+            <p>A web application to convert currency.</p>
+            <a href="https://currency-converter-app-three-omega.vercel.app/" target="_blank" className="project-link">View Project</a>
+          </div>
+          <div className="project-card">
+            <h3>Project 5: Birthday Wish with Music</h3>
+            <p>A web application to wish your loved ones with music.</p>
+            <a href="https://birthday-wish-with-music-player.vercel.app/" target="_blank" className="project-link">View Project</a>
+          </div>
+          <div className="project-card">
+            <h3>Project 6: Recipe Search</h3>
+            <p>A web application to get any recipe quickly.</p>
+            <a href="https://recipe-search-app-byyemna.vercel.app/" target="_blank" className="project-link">View Project</a>
+          </div>
+          <div className="project-card">
+            <h3>Project 7: Fusion Mart Website</h3>
+            <p>A web application for an e-commerce website.</p>
+            <a href="https://fusion-mart-by-yemna.vercel.app/" target="_blank" className="project-link">View Project</a>
+          </div>
+          <div className="project-card">
+            <h3>Project 8: Teachers Day Website</h3>
+            <p>A web application to wish my mentor.</p>
+            <a href="https://teachers-day-tribute-to-sir-hamzah-auez.vercel.app/" target="_blank" className="project-link">View Project</a>
+          </div>
+          <div className="project-card">
+            <h3>Project 9: Meme Generator</h3>
+            <p>A web application to edit and download memes.</p>
+            <a href="https://meme-generator-app-by-yemna.vercel.app/" target="_blank" className="project-link">View Project</a>
+          </div>
+          <div className="project-card">
+            <h3>Project 10: Handmade Crafts Website</h3>
+            <p>A web application to browse handmade crafts.</p>
+            <a href="https://handmade-crafts-madeby-yemna.vercel.app/" target="_blank" className="project-link">View Project</a>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
+      </section>
+
+      {/* Skills Section */}
+      <section id="skills" className="skills-section">
+        <h2>Skills</h2>
+        <div className="skills-container">
+          <div className="skill">
+            <FaNodeJs />
+            <p>Node.js</p>
+          </div>
+          <div className="skill">
+            <FaReact />
+            <p>React.js</p>
+          </div>
+          <div className="skill">
+            <SiNextdotjs />
+            <p>Next.js</p>
+          </div>
+          <div className="skill">
+            <SiTailwindcss />
+            <p>Tailwind CSS</p>
+          </div>
+          <div className="skill">
+            <FaCss3 />
+            <p>CSS</p>
+          </div>
+          <div className="skill">
+            <FaHtml5 />
+            <p>HTML</p>
+          </div>
+          <div className="skill">
+            <FaGitAlt />
+            <p>Git</p>
+          </div>
+          <div className="skill">
+            <SiGooglecloud />
+            <p>Communication Skills</p>
+          </div>
+        </div>
+      </section>
+
+      {/* Download CV Section */}
+      <section id="download-cv" className="download-cv-section">
+        <a href="/Yemna_Mehmood_Portfolio (5).pdf" download className="download-cv-btn">
+          Download My CV
         </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
+      </section>
+
+      {/* Contact Section */}
+      <section id="contact" className="contact-section">
+        <h2>Contact</h2>
+        <ul>
+          <li>Email: <a href="mailto:your.email@example.com">Yemnachohan50@gmail.com</a></li>
+          <li>GitHub: <a href="https://github.com/Yemnamehmood" className="text-blue-500">GitHub Link</a></li>
+          <li>LinkedIn: <a href="https://www.linkedin.com/in/yemna-mehmood-75aa2422b/" className="text-blue-500">LinkedIn Profile</a></li>
+        </ul>
+      </section>
+      <footer>
+        <p>© 2024 Yemna Mehmood</p>
       </footer>
     </div>
   );
